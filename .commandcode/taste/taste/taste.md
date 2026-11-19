@@ -1,0 +1,13 @@
+# Taste
+- Uses structured prompt templates (RICE-POT: Role, Instructions, Context, Example, Parameters, Output, Tone) to specify complex coding tasks. Confidence: 0.8
+- In Selenium automation, requires XPath locators exclusively — explicitly forbids CSS selectors, IDs, and name attributes. Confidence: 0.9
+- Mandates Page Object Model with PageFactory (@FindBy, constructor initialization, reusable action methods). Confidence: 0.9
+- Mandates TestNG with annotations (@Test, @BeforeTest, etc.) and explicit setup/teardown logic. Confidence: 0.9
+- Forbids Thread.sleep() anywhere; expects WebDriverWait or implicit waits instead. Confidence: 0.9
+- Wants robust exception handling via structured try-catch blocks or explicit exception signatures in both Page Objects and test scripts. Confidence: 0.8
+- Wants output limited to runnable code only — no explanations, comments, or extra text. Confidence: 0.8
+- Expects enterprise-level, production-quality code with modular, consistent, readable structure and "almost zero bad coding practice." Confidence: 0.8
+- Wants framework builds verified (e.g., `mvn test-compile`) after implementation, not just files written; expects build-tooling issues (old Maven compiler defaults) to be diagnosed and fixed in the POM. Confidence: 0.8
+- Prefers externalized configuration for URLs and credentials (e.g., config.properties) over hardcoded values, to support swapping external/staging environments. Confidence: 0.6
+- Prefers generated projects/code to live inside the repo's relevant chapter directory (e.g., chap_02_Prompt_Eng, where the source prompt lives) rather than at the repo root or a different chapter — explicitly directs the implementation folder to be created under that chapter directory. Confidence: 0.7
+- Wants the project plan/design doc persisted into the repo as a numbered markdown file in the chapter directory (e.g., 04_Test_Plan_CommandCode.md) with the full plan content pasted in — not left only in the assistant's local plans folder and not just echoed in chat; re-requests the paste explicitly until it lands in the file. Confidence: 0.9
